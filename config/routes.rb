@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pedidos
+  resources :produtos
   root 'home#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
