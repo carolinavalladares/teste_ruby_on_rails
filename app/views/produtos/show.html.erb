@@ -1,10 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @produto %>
+<div >
+  <%= link_to "< Voltar", produtos_path, class: "back_btn", title: "Voltar"%>
+  <%= render "produto_details", produto: @produto %>
+ 
 
-<div>
-  <%= link_to "Edit this produto", edit_produto_path(@produto) %> |
-  <%= link_to "Back to produtos", produtos_path %>
+ <div class="options_container">
+    <%= link_to "Editar Produto", edit_produto_path(@produto), class: "option_link", title: "Editar Produto" %> 
+   
 
-  <%= button_to "Destroy this produto", @produto, method: :delete %>
+    
+  <%= button_to "Excluir Produto", @produto, method: :delete, class: "delete_btn", title: "Excluir Produto"%>
+  </div>
 </div>
+

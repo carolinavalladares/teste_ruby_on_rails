@@ -3,6 +3,14 @@
 
 <header class="header">
     <div class="header_wrapper">
-       <%= link_to "Novo pedido", root_path, class:"add_new_btn", title:"Novo pedido" %> 
+
+        <h1 class="header_title">Gerenciar Pedidos</h1>
+
+        <div class="nav_links_container">
+            <%= link_to "Produtos", produtos_path, class:"nav_link", title:"Produtos" %> 
+            <%= link_to "Pedidos", pedidos_path, class:"nav_link", title:"Pedidos" %> 
+        </div>
+        
+
     </div>
 </header>

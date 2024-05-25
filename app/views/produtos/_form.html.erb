@@ -11,17 +11,23 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :nome, style: "display: block" %>
-    <%= form.text_field :nome %>
+
+  <div class="form_wrapper">
+<div class="form_field_wrapper">
+    <%= form.label :nome, "Nome:", style: "display: block", class: "label" %>
+    <%= form.text_field :nome, class: "input_text" %>
+  </div>
+
+  <div class="form_field_wrapper">
+    <%= form.label :descricao, "Descrição:" ,style: "display: block", class: "label" %>
+
+    <%= form.text_area :descricao %>
   </div>
 
   <div>
-    <%= form.label :descricao, style: "display: block" %>
-    <%= form.text_field :descricao %>
+    <%= form.submit "Salvar Produto", class: "submit_btn" %>
+  </div>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+  
 <% end %>
