@@ -13,10 +13,14 @@ class FornecedorsController < ApplicationController
   # GET /fornecedors/new
   def new
     @fornecedor = Fornecedor.new
+    @fornecedor.emails.build
+    @fornecedor.telefones.build
   end
 
   # GET /fornecedors/1/edit
   def edit
+    @fornecedor.emails.build if @fornecedor.emails.empty?
+    @fornecedor.telefones.build if @fornecedor.telefones.empty?
   end
 
   # POST /fornecedors or /fornecedors.json
@@ -25,7 +29,7 @@ class FornecedorsController < ApplicationController
 
     respond_to do |format|
       if @fornecedor.save
-        format.html { redirect_to fornecedor_url(@fornecedor), notice: "Fornecedor was successfully created." }
+        format.html { redirect_to fornecedor_url(@fornecedor), notice: "Fornecedor criado com sucesso." }
         format.json { render :show, status: :created, location: @fornecedor }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +42,7 @@ class FornecedorsController < ApplicationController
   def update
     respond_to do |format|
       if @fornecedor.update(fornecedor_params)
-        format.html { redirect_to fornecedor_url(@fornecedor), notice: "Fornecedor was successfully updated." }
+        format.html { redirect_to fornecedor_url(@fornecedor), notice: "Fornecedor atualizado com sucesso." }
         format.json { render :show, status: :ok, location: @fornecedor }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +56,7 @@ class FornecedorsController < ApplicationController
     @fornecedor.destroy!
 
     respond_to do |format|
-      format.html { redirect_to fornecedors_url, notice: "Fornecedor was successfully destroyed." }
+      format.html { redirect_to fornecedors_url, notice: "Fornecedor excluído com sucesso." }
       format.json { head :no_content }
     end
   end
@@ -65,6 +69,6 @@ class FornecedorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def fornecedor_params
-      params.require(:fornecedor).permit(:nome, :descricao, :cidade, :endereco, :bairro, :numero)
+      params.require(:fornecedor).permit(:nome, :descricao, :cidade, :endereco, :bairro, :numero, emails_attributes:[:id, :email, :referencia, :_destroy], telefones_attributes:[:id, :ddd, :numero ,:referencia, :_destroy])
     end
 end

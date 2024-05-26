@@ -1,0 +1,19 @@
+<div class="nested_fields_telefones">
+  
+  <div class="field form_field_wrapper " style= "max-width: 50px;" >
+    <%= f.label :ddd,  "DDD:",class: "label" %>
+    <%= f.text_field  :ddd, class: "input_text"   %>
+  </div>
+  <div class="field form_field_wrapper">
+    <%= f.label :numero,  "Número:",class: "label" %>
+    <%= f.text_field  :numero, class: "input_text"   %>
+  </div>
+
+  <div class="field form_field_wrapper">
+    <%= f.label :referencia,  "Referência:",class: "label" %>
+    <%= f.text_field  :referencia, class: "input_text"   %>
+  </div>
+  
+  <%= f.hidden_field :_destroy %>
+  <%# <%= link_to "Remove", '#', class: "remove_fields" %>
+</div>

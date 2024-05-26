@@ -42,6 +42,24 @@
     <%= form.number_field :numero , class: "input_text" %>
   </div>
 
+  <%# Email %>
+  <div class="form_field_wrapper">
+    <p class="label">Emails:</p>
+    <%= form.fields_for :emails do |email_form| %>
+    <%= render 'emails_fields', f: email_form %>
+    <% end %>
+  </div>
+
+   <%# Telefones %>
+  <div class="form_field_wrapper">
+    <p class="label">Telefones:</p>
+    <%= form.fields_for :telefones do |telefone_form| %>
+    <%= render 'telefones_fields', f:telefone_form %>
+    <% end %>
+  </div>
+
+
+
   <div >
     <%= form.submit "Salvar Fornecedor" , class: "submit_btn" %>
   </div>

@@ -35,4 +35,28 @@
     <%= fornecedor.numero %>
    </p> 
 
+   <% if fornecedor.emails.any? %>
+    <div class="field">
+      
+      <strong>Emails:</strong>
+      <ul class="list">
+        <% fornecedor.emails.each do |email| %>
+          <li><%= email.email %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <% if fornecedor.telefones.any? %>
+    <div class="field">
+      
+      <strong>Telefones:</strong>
+      <ul class="list">
+        <% fornecedor.telefones.each do |telefone| %>
+          <li>(<%= telefone.ddd %>) <%= telefone.numero %> </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 </div>

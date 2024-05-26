@@ -52,3 +52,20 @@
   font-size: 18px;
   margin-bottom: 10px;
 }
+
+.nested_fields_emails,
+.nested_fields_telefones {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #eee;
+  margin-top: 8px;
+}
+
+.nested_fields_emails > .form_field_wrapper,
+.nested_fields_telefones > .form_field_wrapper {
+  gap: 0;
+  width: 100%;
+}
