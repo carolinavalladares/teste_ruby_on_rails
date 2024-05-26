@@ -1,33 +1,6 @@
-#pedidos {
-  display: flex;
-  gap: 12px;
-  flex-direction: column;
-}
-
-.pedido {
-  background-color: #ffffff;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 16px;
-  border-radius: 3px;
-  width: 100%;
-}
-
-.pedido_field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 4px;
-}
-
 .datahora {
   color: #888888;
   font-weight: 600;
   font-size: 12px;
   margin-top: 12px;
-}
-
-.show_pedido_link {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-size: 14px;
 }

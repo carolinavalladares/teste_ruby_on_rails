@@ -40,6 +40,11 @@
     <%= form.datetime_field :datahora, class: "input_text" %>
   </div>
 
+   <div class="form_field_wrapper">
+    <%= form.label :transportadora_id,"Transportadora:",  style: "display: block", class: "label" %>
+    <%= form.collection_select(:transportadora_id, Transportadora.all, :id, :nome, {:include_blank => 'Selecione a transportadora'},{:class => 'input_text'}) %>
+  </div>
+
   <h3 class="subtitle">Itens</h3>
   <%= form.fields_for :items do |item_form| %>
     <%= render 'item_fields', f: item_form %>

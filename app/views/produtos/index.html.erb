@@ -7,7 +7,7 @@
 <%= link_to "Novo Produto", new_produto_path, class:"add_new_btn", title:"Novo Produto" %>
 
 
-<div id="produtos">
+<div class="list_container" id="produtos">
   <% @produtos.each do |produto| %>
     <%= render produto %>
   <% end %>

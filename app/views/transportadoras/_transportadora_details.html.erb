@@ -1,0 +1,22 @@
+
+<h1 class="page_title"><%= transportadora.nome %></h1>
+
+<div class="card" id="<%= dom_id transportadora %>">
+
+
+  <p class="id_container">
+    <strong class="label">ID:</strong>
+    <%= transportadora.id %>
+  </p>
+
+  <p class="field">
+    <strong class="label">Quantidade de pedidos: </strong>
+    <%= transportadora.pedidos.count %>
+  </p>
+
+    <div class="options_container">   
+      <%= link_to "Editar Transportadora", edit_transportadora_path(transportadora) , class: "option_link" %>
+      <%= button_to "Excluir Transportadora", transportadora, method: :delete, class: "delete_btn" %>
+    </div>
+
+</div>

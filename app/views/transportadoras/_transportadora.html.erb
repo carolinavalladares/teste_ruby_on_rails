@@ -1,0 +1,19 @@
+<div class="card" id="<%= dom_id transportadora %>">
+  <p class="id_container">
+    <strong class="label">ID:</strong>
+    <%= transportadora.id %>
+  </p>
+
+
+  <p class="field">
+    <strong class="label">Nome:</strong>
+    <%= transportadora.nome %>
+  </p>
+
+    <div class="options_container">   
+     <%# <%= link_to "Editar Transportadora", edit_transportadora_path(transportadora) , class: "option_link" %>
+     <%# <%= button_to "Excluir Transportadora", transportadora, method: :delete, class: "delete_btn" %>
+      <%= link_to "Ver Transportadora >", transportadora, class: "show_link", title: "Ver Transportadora" %>
+    </div>
+
+</div>

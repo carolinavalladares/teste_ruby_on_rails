@@ -1,21 +1,3 @@
-.produto_wrapper {
-  background-color: #ffffff;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 20px;
-  border-radius: 3px;
-}
-
-.options_container {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
-}
-
-.id_container {
-  margin-bottom: 8px;
-}
 .description {
   margin-top: 4px;
   line-height: 1.25;

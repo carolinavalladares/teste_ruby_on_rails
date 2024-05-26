@@ -1,32 +1,39 @@
 
 <h1 class="page_title">Pedido Nº <%= pedido.id%></h1>
-<div id="<%= dom_id pedido %>" class="pedido">
+<div id="<%= dom_id pedido %>" class="card">
 
 
-  <p class="pedido_field">
+  <p class="field">
     <strong class="label">Notafiscal:</strong>
     <%= pedido.notafiscal %>
   </p>
 
-  <p class="pedido_field">
+  <p class="field">
     <strong class="label">Valorfrete:</strong>
    <%= "R" + number_to_currency( pedido.valorfrete) %> 
    </p> 
 
-   <p class="pedido_field">
+   <p class="field">
     <strong class="label">Desconto:</strong>
    <%= "R" + number_to_currency(pedido.desconto)%>
   </p> 
 
-  <p class="pedido_field">
-    <strong class="label">Valortotal:</strong>
+  <p class="field">
+    <strong class="label">Valor Total:</strong>
    <%="R" + number_to_currency(pedido.valortotal) %>
+  </p>
+
+  <p class="field">
+    <strong class="label">Transportadora:</strong>
+   <%=pedido.transportadora.nome%>
   </p>
 
   <p class="datahora">
    
     <%= pedido.datahora.strftime('%d/%m/%y %R')%>
   </p>
+
+  
 
  
 

@@ -1,0 +1,16 @@
+
+
+
+<div class="page_title_container">
+  <h1 class="page_title">Transportadoras</h1>
+</div>
+<%= link_to "Nova Transportadora", new_transportadora_path, class: "add_new_btn" %>
+
+<div class="list_container" id="transportadoras">
+  <% @transportadoras.each do |transportadora| %>
+    <%= render transportadora %>
+    
+  <% end %>
+</div>
+
+

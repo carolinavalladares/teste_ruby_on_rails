@@ -7,7 +7,7 @@
 
 <%= link_to "Novo Pedido", new_pedido_path, class: "add_new_btn" %>
 
-<div id="pedidos">
+<div class="list_container" id="pedidos">
   <% @pedidos.each do |pedido| %>
 
     <%= render pedido %>

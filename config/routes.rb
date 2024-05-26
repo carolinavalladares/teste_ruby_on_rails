@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transportadoras
   resources :pedidos
   resources :produtos
   root 'home#index'
