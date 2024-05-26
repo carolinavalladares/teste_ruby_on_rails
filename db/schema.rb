@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_26_162923) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_26_173419) do
+  create_table "fornecedors", force: :cascade do |t|
+    t.string "nome"
+    t.string "descricao"
+    t.string "cidade"
+    t.string "endereco"
+    t.string "bairro"
+    t.integer "numero"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.float "quantidade"
     t.float "valor"
@@ -39,6 +50,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_26_162923) do
     t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "fornecedor_id", null: false
+    t.index ["fornecedor_id"], name: "index_produtos_on_fornecedor_id"
   end
 
   create_table "transportadoras", force: :cascade do |t|
@@ -50,4 +63,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_26_162923) do
   add_foreign_key "items", "pedidos"
   add_foreign_key "items", "produtos"
   add_foreign_key "pedidos", "transportadoras"
+  add_foreign_key "produtos", "fornecedors"
 end

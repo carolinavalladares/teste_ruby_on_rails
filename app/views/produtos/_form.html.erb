@@ -24,6 +24,12 @@
     <%= form.text_area :descricao %>
   </div>
 
+  <div class="form_field_wrapper">
+    <%= form.label :fornecedor_id, "Fornecedor:" ,style: "display: block", class: "label" %>
+
+    <%= form.collection_select(:fornecedor_id, Fornecedor.all, :id, :nome, {:include_blank => 'Selecione o fornecedor'},{:class => 'input_text'}) %>
+  </div>
+
   <div>
     <%= form.submit "Salvar Produto", class: "submit_btn" %>
   </div>

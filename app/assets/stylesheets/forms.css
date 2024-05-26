@@ -19,7 +19,8 @@
   margin-bottom: 8px;
 }
 
-#produto_descricao {
+#produto_descricao,
+#fornecedor_descricao {
   max-width: 100%;
   min-width: 100%;
   height: 150px;

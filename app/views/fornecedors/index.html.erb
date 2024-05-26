@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="page_title">Fornecedores</h1>
+
+<%= link_to "Novo Fornecedor", new_fornecedor_path, class: "add_new_btn" %>
+
+<div class="list_container" id="fornecedors">
+  <% @fornecedors.each do |fornecedor| %>
+    <%= render fornecedor %>
+   
+  <% end %>
+</div>
+
+

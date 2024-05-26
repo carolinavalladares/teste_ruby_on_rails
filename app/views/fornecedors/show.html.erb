@@ -1,0 +1,11 @@
+
+
+<%= link_to "< Voltar", fornecedors_path , class: "back_btn" %>
+
+<%= render "fornecedor_details", fornecedor: @fornecedor %>
+
+<div class="options_container">
+  <%= link_to "Editar Fornecedor", edit_fornecedor_path(@fornecedor) , class: "option_link" %>
+
+  <%= button_to "Excluir Fornecedor", @fornecedor, method: :delete, class: "delete_btn" %>
+</div>

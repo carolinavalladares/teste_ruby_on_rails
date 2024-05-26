@@ -1,0 +1,50 @@
+<%= form_with(model: fornecedor) do |form| %>
+  <% if fornecedor.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fornecedor.errors.count, "error") %> prohibited this fornecedor from being saved:</h2>
+
+      <ul>
+        <% fornecedor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form_wrapper">
+  <div class="form_field_wrapper">
+    <%= form.label :nome, "Nome:",style: "display: block", class: "label" %>
+    <%= form.text_field :nome,  class: "input_text" %>
+  </div>
+
+  <div class="form_field_wrapper">
+    <%= form.label :descricao, "Descrição:" ,style: "display: block", class: "label" %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="form_field_wrapper">
+    <%= form.label :cidade, "Cidade:",style: "display: block", class: "label" %>
+    <%= form.text_field :cidade , class: "input_text" %>
+  </div>
+
+  <div class="form_field_wrapper">
+    <%= form.label :endereco, "Endereço:",style: "display: block", class: "label" %>
+    <%= form.text_field :endereco , class: "input_text" %>
+  </div>
+
+  <div class="form_field_wrapper">
+    <%= form.label :bairro, "Bairro:", style: "display: block", class: "label" %>
+    <%= form.text_field :bairro , class: "input_text" %>
+  </div>
+
+  <div class="form_field_wrapper">
+    <%= form.label :numero ,"Número:", style: "display: block", class: "label" %>
+    <%= form.number_field :numero , class: "input_text" %>
+  </div>
+
+  <div >
+    <%= form.submit "Salvar Fornecedor" , class: "submit_btn" %>
+  </div>
+</div>
+  
+<% end %>
