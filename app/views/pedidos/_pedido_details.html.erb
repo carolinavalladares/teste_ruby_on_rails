@@ -1,0 +1,33 @@
+
+<h1 class="page_title">Pedido Nº <%= pedido.id%></h1>
+<div id="<%= dom_id pedido %>" class="pedido">
+
+
+  <p class="pedido_field">
+    <strong class="label">Notafiscal:</strong>
+    <%= pedido.notafiscal %>
+  </p>
+
+  <p class="pedido_field">
+    <strong class="label">Valorfrete:</strong>
+   <%= "R" + number_to_currency( pedido.valorfrete) %> 
+   </p> 
+
+   <p class="pedido_field">
+    <strong class="label">Desconto:</strong>
+   <%= "R" + number_to_currency(pedido.desconto)%>
+  </p> 
+
+  <p class="pedido_field">
+    <strong class="label">Valortotal:</strong>
+   <%="R" + number_to_currency(pedido.valortotal) %>
+  </p>
+
+  <p class="datahora">
+   
+    <%= pedido.datahora.strftime('%d/%m/%y %R')%>
+  </p>
+
+ 
+
+</div>

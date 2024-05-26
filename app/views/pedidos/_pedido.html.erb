@@ -1,27 +1,38 @@
-<div id="<%= dom_id pedido %>">
-  <p>
-    <strong>Datahora:</strong>
-    <%= pedido.datahora %>
+<div id="<%= dom_id pedido %>" class="pedido">
+  
+  <p class="id_container">
+     <strong class="label">ID:</strong>
+    <%= pedido.id %>
   </p>
 
-  <p>
-    <strong>Notafiscal:</strong>
+  <p class="pedido_field">
+    <strong class="label">Notafiscal:</strong>
     <%= pedido.notafiscal %>
   </p>
 
-  <p>
-    <strong>Valorfrete:</strong>
-    <%= pedido.valorfrete %>
-  </p>
+  <%# <p class="pedido_field">
+    <strong class="label">Valorfrete:</strong>
+    <%= pedido.valorfrete %> 
+  <%# </p> %>
 
-  <p>
-    <strong>Desconto:</strong>
+  <%# <p class="pedido_field">
+    <strong class="label">Desconto:</strong>
     <%= pedido.desconto %>
+  <%# </p> %>
+
+  <p class="pedido_field">
+    <strong class="label">Valortotal:</strong>
+    <%="R" + number_to_currency(pedido.valortotal) %>
   </p>
 
-  <p>
-    <strong>Valortotal:</strong>
-    <%= pedido.valortotal %>
+  <p class="datahora">
+   
+  <%= pedido.datahora.strftime('%d/%m/%y %R') %>
   </p>
+
+  <p class="see_more_wrapper">
+
+       <%= link_to "Ver Pedido >", pedido, class: "show_pedido_link", title: "Ver Pedido"  %>
+    </p>
 
 </div>

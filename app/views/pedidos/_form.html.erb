@@ -12,38 +12,43 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :datahora, style: "display: block" %>
-    <%= form.datetime_field :datahora %>
+<div class="form_wrapper">
+
+
+  <div class="form_field_wrapper">
+    <%= form.label :notafiscal,"Nota Fiscal:", style: "display: block", class: "label" %>
+    <%= form.text_field :notafiscal, class: "input_text"%>
   </div>
 
-  <div>
-    <%= form.label :notafiscal, style: "display: block" %>
-    <%= form.text_field :notafiscal %>
+  <div class="form_field_wrapper">
+    <%= form.label :valorfrete,"Valor do Frete:", style: "display: block", class: "label" %>
+    <%= form.text_field :valorfrete, class: "input_text"%>
   </div>
 
-  <div>
-    <%= form.label :valorfrete, style: "display: block" %>
-    <%= form.text_field :valorfrete %>
+  <div class="form_field_wrapper">
+    <%= form.label :desconto,"Desconto:", style: "display: block", class: "label" %>
+    <%= form.text_field :desconto, class: "input_text"%>
   </div>
 
-  <div>
-    <%= form.label :desconto, style: "display: block" %>
-    <%= form.text_field :desconto %>
+  <div class="form_field_wrapper">
+    <%= form.label :valortotal,"Valor Total:", style: "display: block", class: "label" %>
+    <%= form.text_field :valortotal, class: "input_text"%>
   </div>
 
-  <div>
-    <%= form.label :valortotal, style: "display: block" %>
-    <%= form.text_field :valortotal %>
+  <div class="form_field_wrapper">
+    <%= form.label :datahora,"Data e Hora:",  style: "display: block", class: "label" %>
+    <%= form.datetime_field :datahora, class: "input_text" %>
   </div>
 
-  <h3>Items</h3>
+  <h3 class="subtitle">Itens</h3>
   <%= form.fields_for :items do |item_form| %>
     <%= render 'item_fields', f: item_form %>
   <% end %>
   
 
   <div>
-    <%= form.submit %>
+    <%= form.submit  "Salvar Pedido", class: "submit_btn" %>
   </div>
+</div>
+  
 <% end %>

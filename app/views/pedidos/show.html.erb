@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @pedido %>
+<%= link_to "< Voltar", pedidos_path, class: "back_btn" %>
 
-<div>
-  <%= link_to "Edit this pedido", edit_pedido_path(@pedido) %> |
-  <%= link_to "Back to pedidos", pedidos_path %>
+<%= render "pedido_details", pedido:@pedido %>
 
-  <%= button_to "Destroy this pedido", @pedido, method: :delete %>
+<div class="options_container">
+  <%= link_to "Editar Pedido", edit_pedido_path(@pedido), class: "option_link", title: "Editar Pedido" %>  
+
+  <%= button_to "Excluir Pedido", @pedido, method: :delete, class: "delete_btn", title: "Excluir Pedido" %>
 </div>

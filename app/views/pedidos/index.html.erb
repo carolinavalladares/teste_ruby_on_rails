@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Pedidos</h1>
+
+<div class="page_title_container">
+
+<h1 class="page_title">Pedidos</h1>
+</div>
+
+<%= link_to "Novo Pedido", new_pedido_path, class: "add_new_btn" %>
 
 <div id="pedidos">
   <% @pedidos.each do |pedido| %>
+
     <%= render pedido %>
-    <p>
-      <%= link_to "Show this pedido", pedido %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New pedido", new_pedido_path %>
+
