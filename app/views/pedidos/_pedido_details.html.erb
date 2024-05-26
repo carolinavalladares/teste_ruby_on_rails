@@ -28,6 +28,17 @@
    <%=pedido.transportadora.nome%>
   </p>
 
+   <% if pedido.items.any? %>
+    <div class="field">
+       <strong class="label">Itens:</strong>
+      <ul class="list">
+        <% pedido.items.each do |item| %>
+          <li><%= item.produto.nome %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p class="datahora">
    
     <%= pedido.datahora.strftime('%d/%m/%y %R')%>
