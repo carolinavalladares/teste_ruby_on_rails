@@ -29,6 +29,5 @@
 .show_pedido_link {
   color: var(--accent-color);
   text-decoration: none;
-  font-weight: 600;
   font-size: 14px;
 }
