@@ -6,7 +6,18 @@
 
         <h1 class="header_title">Gerenciar Pedidos</h1>
 
+        <div class="overlay"></div>
+
+
+        <button title="abrir menu" class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+      
+
         <div class="nav_links_container">
+            <button class="nav_close_btn" title="fechar">&times;</button>
             <%= link_to "Fornecedores", fornecedors_path, class:"nav_link", title:"Fornecedores" %> 
             <%= link_to "Transportadoras", transportadoras_path, class:"nav_link", title:"Transportadoras" %> 
             <%= link_to "Produtos", produtos_path, class:"nav_link", title:"Produtos" %> 
@@ -15,4 +26,6 @@
         
 
     </div>
+
+
 </header>

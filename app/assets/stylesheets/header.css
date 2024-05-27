@@ -24,4 +24,83 @@
 
 .nav_link {
   text-decoration: none;
+  font-size: 14px;
+}
+
+.overlay {
+  display: none;
+}
+.nav_close_btn {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    height: 18px;
+    width: 18px;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .line {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+  }
+
+  .nav_close_btn {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+  }
+
+  .overlay.open {
+    display: block;
+  }
+
+  .nav_links_container {
+    flex-direction: column;
+    padding-top: 50px;
+    position: fixed;
+    right: -220px;
+    top: 0;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 220px;
+    gap: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav_links_container.open {
+    right: 0;
+  }
+
+  .nav_link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-bottom: 1px solid #eeeeee;
+  }
 }
