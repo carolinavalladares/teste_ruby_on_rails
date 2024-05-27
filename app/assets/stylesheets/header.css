@@ -103,4 +103,7 @@
     height: 40px;
     border-bottom: 1px solid #eeeeee;
   }
+  .header_title {
+    font-size: 16px;
+  }
 }
