@@ -3,4 +3,15 @@ class Pedido < ApplicationRecord
     accepts_nested_attributes_for :items, allow_destroy: true
 
     belongs_to :transportadora
+
+
+    validates :notafiscal, presence: {message: "precisa estar preenchida"}
+    validates :valorfrete, presence: {message: "precisa estar preenchido"}
+    validates :valortotal, presence: {message: "precisa estar preenchido"}
+    validates :desconto, presence: {message: "precisa estar preenchido"}
+    validates :datahora, presence: {message: "precisa estar preenchida"}
+    validates :transportadora, presence: {message: "precisa estar preenchida"}
+
+
+
 end

@@ -8,4 +8,14 @@ class Fornecedor < ApplicationRecord
     has_many :telefones, inverse_of: :fornecedor, dependent: :destroy
     accepts_nested_attributes_for :telefones, allow_destroy: true
 
+
+    validates :nome, presence:{message: 'precisa estar preenchido'},
+                    length:{minimum: 5, message: "precisa ter no mínimo 5 caracteres"},
+                    uniqueness: {message: "já existe"}
+    validates :cidade, presence:{message: 'precisa estar preenchida'}
+    validates :endereco, presence:{message: 'precisa estar preenchido'}
+    validates :bairro, presence:{message: 'precisa estar preenchido'}
+    validates :numero, presence:{message: 'precisa estar preenchido'}
+
+
 end

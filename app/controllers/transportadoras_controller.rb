@@ -1,5 +1,6 @@
 class TransportadorasController < ApplicationController
   before_action :set_transportadora, only: %i[ show edit update destroy ]
+  
 
   # GET /transportadoras or /transportadoras.json
   def index

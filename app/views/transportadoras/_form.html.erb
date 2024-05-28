@@ -1,11 +1,10 @@
 <%= form_with(model: transportadora) do |form| %>
   <% if transportadora.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(transportadora.errors.count, "erro") %> impediram a transportadora de ser salva:</h2>
-
-      <ul>
+    <div>
+      <ul class="error_list">
         <% transportadora.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <%# <li><%= error.full_message %></li>
+          <%= render 'layouts/error', error:error %>
         <% end %>
       </ul>
     </div>
