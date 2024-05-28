@@ -20,6 +20,11 @@ body {
   background-color: #eaeaea;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 .content_wrapper {
   max-width: 1024px;
   margin: 0 auto;
