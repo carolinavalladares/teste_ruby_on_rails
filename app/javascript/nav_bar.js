@@ -4,8 +4,6 @@ document.addEventListener("turbo:load", () => {
   const overlay = document.querySelector(".overlay");
   const hamburger = document.querySelector(".hamburger");
 
-  console.log("hi");
-
   hamburger.addEventListener("click", () => {
     nav.classList.add("open");
     overlay.classList.add("open");
