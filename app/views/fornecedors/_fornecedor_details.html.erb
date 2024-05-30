@@ -5,43 +5,43 @@
 
 <div class="card" id="<%= dom_id fornecedor %>">
 
-  <p class="id_container">
-    <strong class="label">ID:</strong>
+  <div class="id_container">
+    <p class="label">ID:</p>
     <%= fornecedor.id %>
-  </p>
+  </div>
 
-   <p class="field">
-    <strong>Descrição:</strong>
+   <div class="field">
+    <p class="label">Descrição:</p>
     <%= fornecedor.descricao %>
-   </p>
+   </div>
 
-  <p class="field">
-    <strong>Cidade:</strong>
+  <div class="field">
+    <p class="label">Cidade:</p>
     <%= fornecedor.cidade %>
-   </p>
+   </div>
 
-  <p class="field">
-    <strong>Endereço:</strong>
+  <div class="field">
+    <p class="label">Endereço:</p>
     <%= fornecedor.endereco %>
-   </p>
+   </div>
 
-  <p class="field">
-    <strong>Bairro:</strong>
+  <div class="field">
+    <p class="label">Bairro:</p>
     <%= fornecedor.bairro %>
-   </p>
+   </div>
 
-  <p class="field">
-    <strong>Número:</strong>
+  <div class="field">
+    <p class="label">Número:</p>
     <%= fornecedor.numero %>
-   </p> 
+   </div> 
 
    <% if fornecedor.emails.any? %>
     <div class="field">
       
-      <strong>Emails:</strong>
+      <p class="label">Emails:</p>
       <ul class="list">
         <% fornecedor.emails.each do |email| %>
-          <li><%= email.email %></li>
+          <li>&#9993; <%= email.email %></li>
         <% end %>
       </ul>
     </div>
@@ -50,10 +50,10 @@
    <% if fornecedor.telefones.any? %>
     <div class="field">
       
-      <strong>Telefones:</strong>
+      <p class="label">Telefones:</p>
       <ul class="list">
         <% fornecedor.telefones.each do |telefone| %>
-          <li>(<%= telefone.ddd %>) <%= telefone.numero %> </li>
+          <li> &#9742 (<%= telefone.ddd %>) <%= telefone.numero %> </li>
         <% end %>
       </ul>
     </div>

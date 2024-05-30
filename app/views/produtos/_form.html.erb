@@ -13,18 +13,18 @@
 
   <div class="form_wrapper">
 <div class="form_field_wrapper">
-    <%= form.label :nome, "Nome:", style: "display: block", class: "label" %>
+    <%= form.label :nome, "Nome:", style: "display: block", class: "form_label" %>
     <%= form.text_field :nome, class: "input_text" %>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :descricao, "Descrição:" ,style: "display: block", class: "label" %>
+    <%= form.label :descricao, "Descrição:" ,style: "display: block", class: "form_label" %>
 
     <%= form.text_area :descricao %>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :fornecedor_id, "Fornecedor:" ,style: "display: block", class: "label" %>
+    <%= form.label :fornecedor_id, "Fornecedor:" ,style: "display: block", class: "form_label" %>
 
     <%= form.collection_select(:fornecedor_id, Fornecedor.all, :id, :nome, {:include_blank => 'Selecione o fornecedor'},{:class => 'input_text'}) %>
   </div>

@@ -15,6 +15,11 @@
   padding-inline: 12px;
 }
 
+.form_label {
+  font-size: 14px;
+  color: #444444;
+}
+
 .form_field_wrapper {
   margin-bottom: 8px;
 }

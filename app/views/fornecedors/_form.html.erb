@@ -12,37 +12,37 @@
 
 <div class="form_wrapper">
   <div class="form_field_wrapper">
-    <%= form.label :nome, "Nome:",style: "display: block", class: "label" %>
+    <%= form.label :nome, "Nome:",style: "display: block", class: "form_label" %>
     <%= form.text_field :nome,  class: "input_text" %>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :descricao, "Descrição:" ,style: "display: block", class: "label" %>
+    <%= form.label :descricao, "Descrição:" ,style: "display: block", class: "form_label" %>
     <%= form.text_area :descricao %>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :cidade, "Cidade:",style: "display: block", class: "label" %>
+    <%= form.label :cidade, "Cidade:",style: "display: block", class: "form_label" %>
     <%= form.text_field :cidade , class: "input_text" %>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :endereco, "Endereço:",style: "display: block", class: "label" %>
+    <%= form.label :endereco, "Endereço:",style: "display: block", class: "form_label" %>
     <%= form.text_field :endereco , class: "input_text" %>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :bairro, "Bairro:", style: "display: block", class: "label" %>
+    <%= form.label :bairro, "Bairro:", style: "display: block", class: "form_label" %>
     <%= form.text_field :bairro , class: "input_text" %>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :numero ,"Número:", style: "display: block", class: "label" %>
+    <%= form.label :numero ,"Número:", style: "display: block", class: "form_label" %>
     <%= form.number_field :numero , class: "input_text" %>
   </div>
 
   <%# Email %>
-    <p class="label">Emails:</p>
+    <p class="form_label">Emails:</p>
   <div id="emails">
     <%= form.fields_for :emails do |email| %>
       <%= render 'email_fields', f: email %>
@@ -54,7 +54,7 @@
 
    <%# Telefones %>
   
-    <p class="label">Telefones:</p>
+    <p class="form_label">Telefones:</p>
   <div id="telefones">
     <%= form.fields_for :telefones do |telefone| %>
       <%= render 'telefone_fields', f: telefone %>

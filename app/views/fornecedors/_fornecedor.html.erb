@@ -1,42 +1,18 @@
 <div class="card" id="<%= dom_id fornecedor %>">
 
-  <p class="id_container">
-    <strong class="label">ID:</strong>
+  <div class="id_container">
+    <p class="label">ID:</p>
     <%= fornecedor.id %>
-  </p>
+  </div>
 
-  <p class="field">
-    <strong>Nome:</strong>
+  <div class="field">
+    <p class="label">Nome:</p>
     <%= fornecedor.nome %>
-  </p>
+  </div>
 
-  <%# <p class="field">
-    <strong>Descricao:</strong>
-    <%= fornecedor.descricao %>
-   <%#</p>
 
-  <p class="field">
-    <strong>Cidade:</strong>
-    <%= fornecedor.cidade %>
-   <%#</p>
-
-  <p class="field">
-    <strong>Endereco:</strong>
-    <%= fornecedor.endereco %>
-   <%#</p>
-
-  <p class="field">
-    <strong>Bairro:</strong>
-    <%= fornecedor.bairro %>
-  <%# </p>
-
-  <p class="field">
-    <strong>Numero:</strong>
-    <%= fornecedor.numero %>
-   <%#</p> %>
-
-    <p class="see_more_wrapper">
+    <div class="see_more_wrapper">
       <%= link_to "Ver Fornecedor >", fornecedor , class: "show_link", title: "Ver Fornecedor"%>
-    </p>
+    </div>
 
 </div>

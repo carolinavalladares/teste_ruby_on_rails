@@ -16,6 +16,6 @@ class Fornecedor < ApplicationRecord
     validates :endereco, presence:{message: 'precisa estar preenchido'}
     validates :bairro, presence:{message: 'precisa estar preenchido'}
     validates :numero, presence:{message: 'precisa estar preenchido'}
-
+    validates :telefones, length: { minimum: 1 ,message:'precisa ter pelo menos um telefone'} 
 
 end

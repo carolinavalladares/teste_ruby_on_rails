@@ -4,15 +4,15 @@
 <div class="card" id="<%= dom_id transportadora %>">
 
 
-  <p class="id_container">
-    <strong class="label">ID:</strong>
+  <div class="id_container">
+    <p class="label">ID:</p>
     <%= transportadora.id %>
-  </p>
+  </div>
 
-  <p class="field">
-    <strong class="label">Quantidade de pedidos: </strong>
+  <div class="field amount_field">
+    <p class="label">Quantidade de pedidos: </p>
     <%= transportadora.pedidos.count %>
-  </p>
+  </div>
 
     <div class="options_container">   
       <%= link_to "Editar Transportadora", edit_transportadora_path(transportadora) , class: "option_link" %>

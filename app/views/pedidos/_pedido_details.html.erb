@@ -3,37 +3,49 @@
 <div id="<%= dom_id pedido %>" class="card">
 
 
-  <p class="field">
-    <strong class="label">Notafiscal:</strong>
+  <div class="field">
+    <p class="label">Notafiscal:</p>
     <%= pedido.notafiscal %>
-  </p>
+  </div>
 
-  <p class="field">
-    <strong class="label">Valorfrete:</strong>
+  <div class="field">
+    <p class="label">Valorfrete:</p>
    <%= "R" + number_to_currency( pedido.valorfrete) %> 
-   </p> 
+   </div> 
 
-   <p class="field">
-    <strong class="label">Desconto:</strong>
+   <div class="field">
+    <p class="label">Desconto:</p>
    <%= "R" + number_to_currency(pedido.desconto)%>
-  </p> 
+  </div> 
 
-  <p class="field">
-    <strong class="label">Valor Total:</strong>
+  <div class="field">
+    <p class="label">Valor Total:</p>
    <%="R" + number_to_currency(pedido.valortotal) %>
-  </p>
+  </div>
 
-  <p class="field">
-    <strong class="label">Transportadora:</strong>
+  <div class="field">
+    <p class="label">Transportadora:</p>
    <%=pedido.transportadora.nome%>
-  </p>
+  </div>
 
    <% if pedido.items.any? %>
     <div class="field">
-       <strong class="label">Itens:</strong>
+       <p class="label">Itens:</p>
       <ul class="list">
         <% pedido.items.each do |item| %>
-          <li><%= item.produto.nome %></li>
+          <li>
+            <div class="pedido_item">
+              <div>
+                <p class="label">Produto:</p>
+                <%= item.produto.nome %>
+              </div>
+             
+              <div>
+                <p class="label">Quantidade: </p>
+                <%= item.quantidade %>
+              </div>
+            </div>
+          </li>
         <% end %>
       </ul>
     </div>

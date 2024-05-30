@@ -13,38 +13,38 @@
 
 <div class="form_wrapper">
   <div class="form_field_wrapper">
-    <%= form.label :notafiscal,"Nota Fiscal:", style: "display: block", class: "label" %>
+    <%= form.label :notafiscal,"Nota Fiscal:", style: "display: block", class: "form_label" %>
     <%= form.text_field :notafiscal, class: "input_text"%>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :valorfrete,"Valor do Frete:", style: "display: block", class: "label" %>
+    <%= form.label :valorfrete,"Valor do Frete:", style: "display: block", class: "form_label" %>
     <%= form.text_field :valorfrete, class: "input_text"%>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :desconto,"Desconto:", style: "display: block", class: "label" %>
+    <%= form.label :desconto,"Desconto:", style: "display: block", class: "form_label" %>
     <%= form.text_field :desconto, class: "input_text"%>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :valortotal,"Valor Total:", style: "display: block", class: "label" %>
+    <%= form.label :valortotal,"Valor Total:", style: "display: block", class: "form_label" %>
     <%= form.text_field :valortotal, class: "input_text"%>
   </div>
 
   <div class="form_field_wrapper">
-    <%= form.label :datahora,"Data e Hora:",  style: "display: block", class: "label" %>
+    <%= form.label :datahora,"Data e Hora:",  style: "display: block", class: "form_label" %>
     <%= form.datetime_field :datahora, class: "input_text" %>
   </div>
 
    <div class="form_field_wrapper">
-    <%= form.label :transportadora_id,"Transportadora:",  style: "display: block", class: "label" %>
+    <%= form.label :transportadora_id,"Transportadora:",  style: "display: block", class: "form_label" %>
     <%= form.collection_select(:transportadora_id, Transportadora.all, :id, :nome, {:include_blank => 'Selecione a transportadora'},{:class => 'input_text'}) %>
   </div>
 
   
   <div id="items">
-      <p class="label">Itens:</p>
+      <p class="form_label">Itens:</p>
     
   
     <%= form.fields_for :items do |item| %>
