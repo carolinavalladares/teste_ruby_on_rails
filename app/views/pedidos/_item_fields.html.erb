@@ -1,5 +1,6 @@
 
 <div class="nested-fields">
+  
   <div class="field form_field_wrapper">
     <%= f.label :produto_id ,"Produto:",class: "label"  %>
     <%= f.collection_select(:produto_id, Produto.all, :id, :nome, {:include_blank => 'Selecione o produto'},{:class => 'input_text'}) %>
@@ -12,6 +13,7 @@
     <%= f.label :valor,"Valor:",class: "label" %>
     <%= f.number_field :valor,class: "input_text", step: :any %>
   </div>
-  <%= f.hidden_field :_destroy %>
-  <%# <%= link_to "Remove", '#', class: "remove_fields" %>
+
+  <%= link_to_remove_association "Remove Item", f, class: "remove_item_btn", title: "Remover item" %>
+
 </div>

@@ -67,6 +67,6 @@ class PedidosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pedido_params
-      params.require(:pedido).permit(:datahora, :notafiscal, :valorfrete, :desconto, :valortotal, :transportadora_id, items_attributes:[:id,:quantidade, :valor, :produto_id, :_destroy])
+      params.require(:pedido).permit(:datahora, :notafiscal, :valorfrete, :desconto, :valortotal, :transportadora_id, items_attributes:%i[id quantidade valor produto_id _destroy])
     end
 end

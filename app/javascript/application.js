@@ -3,3 +3,4 @@
 import "@hotwired/turbo-rails";
 import "controllers";
 import "./nav_bar.js";
+import "@nathanvda/cocoon";

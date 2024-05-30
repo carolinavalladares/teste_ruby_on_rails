@@ -12,8 +12,6 @@
   <% end %>
 
 <div class="form_wrapper">
-
-
   <div class="form_field_wrapper">
     <%= form.label :notafiscal,"Nota Fiscal:", style: "display: block", class: "label" %>
     <%= form.text_field :notafiscal, class: "input_text"%>
@@ -44,10 +42,21 @@
     <%= form.collection_select(:transportadora_id, Transportadora.all, :id, :nome, {:include_blank => 'Selecione a transportadora'},{:class => 'input_text'}) %>
   </div>
 
-  <h3 class="subtitle">Itens</h3>
-    <%= form.fields_for :items do |item_form| %>
-    <%= render 'item_fields', f: item_form %>
+  
+  <div id="items">
+      <h3 class="subtitle">Itens</h3>
+    
+  
+    <%= form.fields_for :items do |item| %>
+      <%= render 'item_fields', f: item %>
     <% end %>
+
+      <div class="links">
+      <%= link_to_add_association "Adicionar item", form, :items , class: "add_item_btn", title: "Adicionar novo item" %>
+    </div>
+     
+  </div>
+   
   
 
   <div>
