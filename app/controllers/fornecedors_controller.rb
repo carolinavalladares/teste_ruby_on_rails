@@ -69,6 +69,6 @@ class FornecedorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def fornecedor_params
-      params.require(:fornecedor).permit(:nome, :descricao, :cidade, :endereco, :bairro, :numero, emails_attributes:[:id, :email, :referencia, :_destroy], telefones_attributes:[:id, :ddd, :numero ,:referencia, :_destroy])
+      params.require(:fornecedor).permit(:nome, :descricao, :cidade, :endereco, :bairro, :numero, emails_attributes:%i[id email referencia _destroy], telefones_attributes:%i[id ddd numero referencia _destroy])
     end
 end

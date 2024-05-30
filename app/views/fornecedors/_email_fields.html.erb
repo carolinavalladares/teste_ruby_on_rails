@@ -1,4 +1,4 @@
-<div class="nested_fields_emails">
+<div class="nested-fields nested_fields_emails">
   
   <div class="field form_field_wrapper">
     <%= f.label :email,  "Email:",class: "label" %>
@@ -10,6 +10,6 @@
     <%= f.text_field  :referencia, class: "input_text"   %>
   </div>
   
-  <%= f.hidden_field :_destroy %>
-  <%# <%= link_to "Remove", '#', class: "remove_fields" %>
+  <%= link_to_remove_association "Excluir", f, class: "remove_item_btn", title: "Excluir" %>
+
 </div>

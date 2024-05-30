@@ -84,9 +84,10 @@
   margin-left: auto;
   margin-right: 0;
   font-weight: 600;
+  padding: 0 4px;
 }
 
-.nested-fields {
+.nested_fields_items {
   border-top: 1px solid #eeeeee;
   padding: 8px 0;
 }
@@ -97,13 +98,17 @@
   align-items: center;
   width: 100%;
   gap: 8px;
-  padding: 12px;
-  border-top: 1px solid #eee;
-  margin-top: 8px;
 }
 
 .nested_fields_emails > .form_field_wrapper,
 .nested_fields_telefones > .form_field_wrapper {
   gap: 0;
   width: 100%;
+}
+
+#emails,
+#telefones {
+  border-top: 1px solid #eee;
+  margin-top: 8px;
+  padding: 12px;
 }

@@ -42,19 +42,26 @@
   </div>
 
   <%# Email %>
-  <div class="form_field_wrapper">
     <p class="label">Emails:</p>
-    <%= form.fields_for :emails do |email_form| %>
-    <%= render 'emails_fields', f: email_form %>
+  <div id="emails">
+    <%= form.fields_for :emails do |email| %>
+      <%= render 'email_fields', f: email %>
     <% end %>
+      <div class="links">
+      <%= link_to_add_association "Adicionar email", form, :emails,  class: "add_item_btn", title: "Adicionar novo email" %>
+    </div>
   </div>
 
    <%# Telefones %>
-  <div class="form_field_wrapper">
+  
     <p class="label">Telefones:</p>
-    <%= form.fields_for :telefones do |telefone_form| %>
-    <%= render 'telefones_fields', f:telefone_form %>
+  <div id="telefones">
+    <%= form.fields_for :telefones do |telefone| %>
+      <%= render 'telefone_fields', f: telefone %>
     <% end %>
+      <div class="links">
+      <%= link_to_add_association "Adicionar telefone", form, :telefones,  class: "add_item_btn", title: "Adicionar novo telefone" %>
+    </div>
   </div>
 
 
