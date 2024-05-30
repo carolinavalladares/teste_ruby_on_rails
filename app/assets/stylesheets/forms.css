@@ -93,7 +93,8 @@
 }
 
 .nested_fields_emails,
-.nested_fields_telefones {
+.nested_fields_telefones,
+.telefone_field {
   display: flex;
   align-items: center;
   width: 100%;
@@ -101,7 +102,8 @@
 }
 
 .nested_fields_emails > .form_field_wrapper,
-.nested_fields_telefones > .form_field_wrapper {
+.nested_fields_telefones > .form_field_wrapper,
+.telefone_field > .form_field_wrapper {
   gap: 0;
   width: 100%;
 }
@@ -111,4 +113,11 @@
   border-top: 1px solid #eee;
   margin-top: 8px;
   padding: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .nested_fields_emails,
+  .nested_fields_telefones {
+    flex-direction: column;
+  }
 }
